@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Esha &amp; Abdul Rehman — Wedding Invitation</title>
+<meta name="theme-color" content="#f3ece1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italianno&family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f3ece1;--ink:#4a2a35;--plum:#5b2b3c;--gold:#b48a3c;--peach:#d9946a}
+*{box-sizing:border-box;margin:0}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',serif;-webkit-font-smoothing:antialiased}
+.pg{min-height:100svh;scroll-snap-align:start;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:48px 24px;text-align:center}
+.pg:nth-child(even){background:#efe5d6}
+.in{position:relative;z-index:2;max-width:420px;width:100%}
+.cap{font-family:Cinzel,serif;font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--plum)}
+.script{font-family:Italianno,cursive;color:var(--plum);line-height:.95}
+.names{font-size:clamp(64px,19vw,92px)}
+.amp{font-size:clamp(40px,12vw,56px);color:var(--gold);display:block;margin:2px 0}
+.big{font-family:Cinzel,serif;font-size:clamp(26px,8vw,36px);letter-spacing:.12em;color:var(--plum);margin:10px 0}
+p.s{font-size:19px;line-height:1.5;margin:6px 0}
+.img{position:absolute;pointer-events:none;user-select:none}
+/* reveal */
+.rv{opacity:0;transform:translateY(16px);transition:opacity 1.4s ease,transform 1.4s ease}
+.pg.on .rv{opacity:1;transform:none}
+.pg.on .rv:nth-child(2){transition-delay:.25s}.pg.on .rv:nth-child(3){transition-delay:.5s}.pg.on .rv:nth-child(4){transition-delay:.75s}.pg.on .rv:nth-child(5){transition-delay:1s}
+/* page 1 */
+.doily{width:min(150vw,720px);left:50%;top:50%;margin:calc(min(150vw,720px)/-2) 0 0 calc(min(150vw,720px)/-2);opacity:.9;animation:spin 240s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.p1 .in{background:radial-gradient(closest-side,rgba(243,236,225,.96) 62%,rgba(243,236,225,0));padding:60px 12px}
+.hint{position:absolute;bottom:18px;left:0;right:0;font-family:Cinzel;font-size:10px;letter-spacing:.4em;color:var(--plum);opacity:.7;animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+/* page 2 */
+.ribbon{width:min(100%,520px);left:50%;transform:translateX(-50%)}
+.ribbon.t{top:14px}.ribbon.b{bottom:14px;transform:translateX(-50%) scaleY(-1)}
+.tape{width:130px;top:70px;right:-14px;transform:rotate(18deg);opacity:.95}
+.date{display:flex;justify-content:center;align-items:center;gap:16px;margin:16px 0}
+.date b{font-family:Cinzel;font-weight:500;font-size:13px;letter-spacing:.3em;color:var(--plum)}
+.date i{font-family:Italianno;font-style:normal;font-size:96px;line-height:.9;color:var(--plum);border-inline:1px solid var(--gold);padding:0 18px}
+.candle{width:150px;height:auto;border-radius:90px 90px 6px 6px;box-shadow:0 14px 30px rgba(74,42,53,.22);margin:18px auto 0;display:block}
+/* page 3 */
+.tray{width:min(86vw,380px);left:50%;top:50%;margin:calc(min(86vw,380px)*-.66) 0 0 calc(min(86vw,380px)/-2);opacity:.95;filter:drop-shadow(0 18px 24px rgba(74,42,53,.3))}
+.p3 .in{max-width:230px;margin-top:6px}
+.p3 .big{font-size:20px;letter-spacing:.1em}
+.btn{display:inline-block;margin-top:14px;padding:10px 18px;border:1px solid var(--plum);color:var(--plum);text-decoration:none;font-family:Cinzel;font-size:11px;letter-spacing:.25em;background:rgba(243,236,225,.85);transition:.3s}
+.btn:hover{background:var(--plum);color:var(--cream)}
+.key{width:90px;bottom:3%;right:6%;transform:rotate(-24deg);filter:drop-shadow(0 8px 8px rgba(0,0,0,.25))}
+.table{width:120px;bottom:3%;left:5%;border-radius:8px;box-shadow:0 10px 20px rgba(74,42,53,.25);transform:rotate(-4deg)}
+/* page 4 */
+.swirl{width:150px;top:12px;left:8px;opacity:.8}
+.swirl.r{top:auto;left:auto;right:8px;bottom:12px;transform:rotate(180deg)}
+.seal{width:130px;margin:0 auto 18px;display:block;filter:drop-shadow(0 10px 12px rgba(74,42,53,.35));animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.05) rotate(-3deg)}}
+.hib{width:160px;bottom:-30px;left:-34px;transform:rotate(-12deg)}
+.hib.r{bottom:auto;left:auto;top:-30px;right:-34px;transform:rotate(150deg)}
+.dots{position:fixed;right:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:9}
+.dots a{width:7px;height:7px;border-radius:50%;background:var(--plum);opacity:.3;transition:.3s}
+.dots a.on{opacity:1;transform:scale(1.5)}
+@media (prefers-reduced-motion:reduce){.doily,.seal,.hint{animation:none}.rv{transition:none}}
+</style></head><body>
+<nav class="dots"><a href="#p1"></a><a href="#p2"></a><a href="#p3"></a><a href="#p4"></a></nav>
+
+<section class="pg p1 on" id="p1">
+  <img class="img doily" src="assets/doily.webp" alt="">
+  <div class="in">
+    <div class="cap rv">Join us for</div>
+    <div class="cap rv" style="margin-top:10px;font-size:11px">the wedding of</div>
+    <div class="script names rv" style="margin-top:6px">Esha<span class="amp">&amp;</span>Abdul Rehman</div>
+  </div>
+  <div class="hint">SCROLL</div>
+</section>
+
+<section class="pg p2" id="p2">
+  <img class="img ribbon t" src="assets/ribbon.webp" alt="">
+  <img class="img ribbon b" src="assets/ribbon.webp" alt="">
+  <img class="img tape" src="assets/tape.webp" alt="">
+  <div class="in">
+    <div class="cap rv">Save the date</div>
+    <div class="date rv"><b>TUESDAY<br>NOVEMBER</b><i>24</i><b>2026<br>12 – 4 PM</b></div>
+    <p class="s rv">Lunch &amp; celebration with family and friends</p>
+    <img class="candle rv" src="assets/candle.webp" alt="" style="display:block">
+  </div>
+</section>
+
+<section class="pg p3" id="p3">
+  <img class="img tray" src="assets/tray.webp" alt="">
+  <img class="img table" src="assets/table.webp" alt="">
+  <img class="img key" src="assets/key.webp" alt="">
+  <div class="in">
+    <div class="cap rv" style="font-size:10px">Venue</div>
+    <div class="big rv">Pine Star Farmhouse</div>
+    <p class="s rv" style="font-size:16px">Pine Avenue, Green Acres Extension, T&amp;T Aabpara Housing Society, Lahore</p>
+    <a class="btn rv" href="https://maps.app.goo.gl/rT2LsmVyEpmhjxgP8" target="_blank" rel="noopener">OPEN MAP</a>
+  </div>
+</section>
+
+<section class="pg p4" id="p4">
+  <img class="img swirl" src="assets/swirl.webp" alt="">
+  <img class="img swirl r" src="assets/swirl.webp" alt="">
+  <img class="img hib" src="assets/hibiscus.webp" alt="">
+  <img class="img hib r" src="assets/hibiscus.webp" alt="">
+  <div class="in">
+    <img class="seal rv" src="assets/seal.webp" alt="">
+    <div class="script rv" style="font-size:clamp(56px,16vw,76px)">See you there!</div>
+    <p class="s rv" style="margin-top:12px">With love, Esha &amp; Abdul Rehman</p>
+  </div>
+</section>
+
+<script>
+const pgs=[...document.querySelectorAll('.pg')],dots=[...document.querySelectorAll('.dots a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');dots.forEach((d,i)=>d.classList.toggle('on',pgs[i]===e.target))}}),{threshold:.55});
+pgs.forEach(p=>io.observe(p));
+</script></body></html>
