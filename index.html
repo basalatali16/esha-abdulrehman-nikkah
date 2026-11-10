@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Esha &amp; Abdulrehman | Nikkah Invitation</title>
-<meta name="description" content="You are invited to the Nikkah of Esha and Abdulrehman.">
-<meta property="og:title" content="Esha & Abdulrehman | Nikkah Invitation">
+<title>Abdulrehman &amp; Esha | Nikkah Invitation</title>
+<meta name="description" content="You are invited to the Nikkah of Abdulrehman and Esha.">
+<meta property="og:title" content="Abdulrehman & Esha | Nikkah Invitation">
 <meta property="og:description" content="Open your invitation.">
 <meta name="theme-color" content="#f0d2c0">
 <link rel="preload" as="image" href="assets/curtain.webp">
@@ -124,7 +124,7 @@ h2.title{font-family:var(--serif);font-weight:300;font-style:italic;font-size:38
   <div class="panel r"><div class="fold"></div><div class="shade"></div><div class="sheen"></div><i class="trim"></i></div>
   <div class="rod"></div>
   <div class="seal"><img src="assets/seal.webp" alt="" width="656" height="656"></div>
-  <div class="to"><small>Together with their families</small>Esha &amp; Abdulrehman</div>
+  <div class="to"><small>Together with their families</small>Abdulrehman &amp; Esha</div>
   <div class="tap">Tap to open</div>
 </div>
 
@@ -144,7 +144,7 @@ h2.title{font-family:var(--serif);font-weight:300;font-style:italic;font-size:38
     <div class="content">
       <div class="bismillah reveal foil">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
       <div class="eyebrow reveal">Together with their families</div>
-      <h1 class="names reveal foil">Esha<span class="amp">&amp;</span>Abdulrehman</h1>
+      <h1 class="names reveal foil">Abdulrehman<span class="amp">&amp;</span>Esha</h1>
       <p class="lead reveal">request the honour of your presence<br>at their Nikkah ceremony</p>
       <svg class="orn reveal" aria-hidden="true"><use href="#orn"/></svg>
       <div class="date reveal" id="dateTxt"></div>
@@ -214,7 +214,7 @@ $('#mapBtn').href = CONFIG.mapLink || ('https://www.google.com/maps/search/?api=
 if (CONFIG.rsvpLink) { $('#rsvpRow').hidden = false; $('#rsvpBtn').href = CONFIG.rsvpLink; }
 $('#calBtn').onclick = () => {
   const z = x => x.toISOString().replace(/[-:]/g,'').split('.')[0] + 'Z';
-  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','SUMMARY:Nikkah of ' + CONFIG.bride + ' & ' + CONFIG.groom,'DTSTART:' + z(d),'DTEND:' + z(e),'LOCATION:' + CONFIG.venue + ', ' + CONFIG.address,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const ics = ['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','SUMMARY:Nikkah of ' + CONFIG.groom + ' & ' + CONFIG.bride,'DTSTART:' + z(d),'DTEND:' + z(e),'LOCATION:' + CONFIG.venue + ', ' + CONFIG.address,'END:VEVENT','END:VCALENDAR'].join('\r\n');
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([ics],{type:'text/calendar'})); a.download = 'nikkah.ics'; a.click();
 };
 /* countdown */
